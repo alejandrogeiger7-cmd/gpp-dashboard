@@ -399,10 +399,10 @@ def color_readiness(val):
 
 styled = (
     display_df.style
-    .applymap(color_status,    subset=["Status"])
-    .applymap(color_risk,      subset=["Injury Risk"])
-    .applymap(color_rec,       subset=["Recommendation"])
-    .applymap(color_readiness, subset=["Readiness"])
+    .map(color_status,    subset=["Status"])
+    .map(color_risk,      subset=["Injury Risk"])
+    .map(color_rec,       subset=["Recommendation"])
+    .map(color_readiness, subset=["Readiness"])
     .set_properties(**{"font-size": "13px"})
     .hide(axis="index")
 )
@@ -556,4 +556,4 @@ st.markdown("""
 <div style="text-align:center;font-size:11px;color:#bbb;padding:16px 0;border-top:1px solid #eee;">
     ⚡ Geiger Performance Pulse &nbsp;|&nbsp; Powered by Streamlit &nbsp;|&nbsp; Recovery data is for coaching use only
 </div>
-""", unsafe_allow_html=True)
+""", unsafe_allow_html=True)ching use only
